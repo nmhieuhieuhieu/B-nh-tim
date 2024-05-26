@@ -30,7 +30,7 @@ The goal of this project is to develop models that can predict the likelihood of
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/heart-disease-prediction.git
+    git clone https://github.com/nmhieuhieuhieu/B-nh-tim.git
     cd heart-disease-prediction
     ```
 
