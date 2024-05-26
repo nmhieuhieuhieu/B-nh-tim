@@ -1,38 +1,121 @@
+# Heart Disease Prediction
 
-# Dự án chuẩn đoán bệnh tim sử dụng học máy
+This repository contains a project aimed at predicting heart disease using various machine learning algorithms, including Logistic Regression (LR), Random Forest (RF), AdaBoost, and Gaussian Naive Bayes. Additionally, it includes a Flask web application for making predictions based on user inputs.
 
-Với độ chính xác Accuracy trên 80%
+## Table of Contents
 
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Models](#models)
+- [Dataset](#dataset)
+- [Results](#results)
+- [Flask Web Application](#flask-web-application)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Authors
+## Introduction
 
-- Nguyễn Minh Hiếu - K67AI1 - UET - VNU
-- Ngô Văn Kiệt -  K67AI1 - UET - VNU
-- Phạm Thành Nam -  K67AI1 - UET - VNU
+The goal of this project is to develop models that can predict the likelihood of heart disease based on various health indicators. The models help in early detection and intervention, potentially saving lives.
 
+## Features
 
+- Data preprocessing and cleaning
+- Implementation of Logistic Regression, Random Forest, AdaBoost, and Gaussian Naive Bayes models
+- Evaluation and comparison of model performance
+- Flask web application for real-time prediction
 
+## Installation
 
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/your-username/heart-disease-prediction.git
+    cd heart-disease-prediction
+    ```
 
+2. Create and activate a virtual environment (optional but recommended):
+    ```sh
+    python -m venv venv
+    source venv/bin/activate # On Windows use `venv\Scripts\activate`
+    ```
 
-# Xin Chào, tôi là Hiếu! 👋
- Học máy (machine learning) là một lĩnh vực của trí tuệ nhân tạo liên quan
-đến việc nghiên cứu và xây dựng các kĩ thuật cho phép các hệ thống "học" tự động
-từ dữ liệu để giải quyết những vấn đề cụ thể. Các thuật toán học máy xây dựng một
-mô hình dựa trên dữ liệu mẫu, được gọi là dữ liệu huấn luyện, để đưa ra dự đoán
-hoặc quyết định mà không cần được lập trình chi tiết về việc đưa ra dự đoán hoặc
-quyết định này.
-Tại sao việc chẩn đoán bệnh lại trở thành một thách thức lớn trong lĩnh vực y
-tế? Một phần lớn là do bệnh có thể có nhiều triệu chứng và biểu hiện khác nhau, đặc
-biệt là ở các giai đoạn đầu khi triệu chứng không rõ ràng. Điều này làm cho việc
-chẩn đoán trở nên phức tạp và đòi hỏi sự kỹ thuật và kiến thức sâu sắc từ các bác sĩ.
-Một cách tiếp cận hiệu quả để giải quyết vấn đề này là sử dụng kỹ thuật học máy để
-phân loại và dự đoán bệnh tim. Học máy có khả năng học từ dữ liệu và tạo ra các
-mô hình dự đoán dựa trên các đặc điểm và mẫu trong dữ liệu. Khi được huấn luyện
-với các tập dữ liệu lớn và đa dạng, các thuật toán học máy có thể trở nên rất mạnh
-mẽ trong việc nhận diện các mẫu phức tạp và dự đoán kết quả.
+3. Install the required packages:
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-Chúng tôi đã sử
-dụng nhiều thuật toán học máy khác nhau như: K nearest neighbors (KNN), LR,
-RF,.....để có thể đánh giá lẫn nhau độ hiệu quả, chính xác của các thuật toán, từ đó
-chọn ra thuật toán tốt nhất để sử dụng.
+## Usage
+
+1. Preprocess the data:
+    ```sh
+    python preprocess.py
+    ```
+
+2. Train the models:
+    - Logistic Regression:
+      ```sh
+      python train_lr.py
+      ```
+
+    - Random Forest:
+      ```sh
+      python train_rf.py
+      ```
+
+    - AdaBoost:
+      ```sh
+      python train_adaboost.py
+      ```
+
+    - Gaussian Naive Bayes:
+      ```sh
+      python train_gaussian.py
+      ```
+
+3. Evaluate the models:
+    ```sh
+    python evaluate.py
+    ```
+
+## Models
+
+- **Logistic Regression (LR)**: A simple yet effective machine learning algorithm for binary classification.
+- **Random Forest (RF)**: An ensemble learning method that constructs multiple decision trees for improved accuracy.
+- **AdaBoost**: An ensemble learning method that combines weak classifiers to create a strong classifier.
+- **Gaussian Naive Bayes**: A probabilistic classifier based on Bayes' theorem with strong independence assumptions.
+
+## Dataset
+
+The dataset used in this project consists of health indicators relevant to heart disease prediction. The data is preprocessed and cleaned before being used for model training. The dataset should be placed in the `data` directory. A sample dataset can be found on the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/heart+disease).
+
+## Results
+
+The performance of each model is evaluated using metrics such as accuracy, precision, recall, and F1-score. Detailed results and comparisons are provided in the `results` directory.
+
+## Flask Web Application
+
+A simple Flask web application is provided to make real-time heart disease predictions based on user inputs.
+
+1. Run the Flask app:
+    ```sh
+    python app.py
+    ```
+
+2. Open your web browser and go to `http://127.0.0.1:5000/` to access the application.
+
+The web application allows users to input various health indicators and get predictions on the likelihood of heart disease.
+
+## Contributing
+
+We welcome contributions to this project. Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Create a Pull Request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
